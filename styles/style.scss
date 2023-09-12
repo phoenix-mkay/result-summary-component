@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// Variables
+:root{
+    --light-red: hsl(0, 100%, 67%);
+    --orange-yellow: hsl(39, 100%, 56%);
+    --green-teal:hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    
+    // Backgrounds
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue:hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+
+    // Neutral
+    --white: hsl(0, 0%, 100%);
+    --pale-blue:hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+    --lighter-gray-blue: hsla(224,30%,27%,0.5);
+    // Typography
+    --font-size:18px;
+    --font-family:'Hanken Grotesk', sans-serif;
+}
+
+body{
+    font: {
+        family:var(--font-family);
+        size:var(--font-size);
+        weight:500;
+    }
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+
+}
+
+
+.btn{
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    background:var(--dark-gray-blue);
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    a{
+        color:var(--white);
+        text-decoration: none;
+        font-weight: 700;  
+    }
+}
+.btn:hover{
+    background: linear-gradient(to top, var(--light-royal-blue), var(--light-slate-blue));
+
+}
+#result-summary-component{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 700px;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 30px;
+        box-shadow: 5px 5px 5px var(--pale-blue),5px -5px 5px var(--pale-blue);
+    }
+    .overall-score-component,.summary-score-component{
+        flex: 50%;
+        padding: 60px 040px;
+        .title{
+            margin-bottom: 30px;
+        }
+    }
+    .overall-score-component{
+        background: linear-gradient(to top, var(--light-royal-blue), var(--light-slate-blue));
+        text-align: center;
+        color: var(--white);
+        border-radius: 30px;
+        .title{
+            font: {
+                size: 1.5rem;
+                weight: 700;
+            }
+            opacity: 0.8;
+        }
+        .total-score{
+            padding: 60px;
+            background: linear-gradient(
+                to top,
+                var(--persian-blue),
+                var(--violet-blue)
+            );
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                .total-mark,.light{
+                    display: inline-block;
+                }
+                .total-mark{
+                    font: {
+                        size: 4.5rem;
+                        weight: 700;
+                    }
+                }
+                .light{
+                    opacity: 0.5;
+                }
+            }
+        }
+        .comment{
+            margin-bottom: 30px;
+            font: {
+                size: 1.5rem;
+                weight: 700;
+            }
+        }
+        .evaluation{
+            opacity: 0.8;
+        }
+    }
+    .summary-score-component{
+        background-color: var(--white);
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        .title{
+            color: var(--dark-gray-blue);
+        }
+        .subjects-score{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            gap:15px;
+            .subject{
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                align-items: center;
+                border-radius: 10px;
+                figure{
+                    display: flex;
+                    gap:8px;
+                }
+            }
+            .reaction {
+                color: var(--light-red);
+                background: hsl(0deg 60.1% 94.45%);
+              }
+              
+              .memory {
+                color: var(--orange-yellow);
+                background: hsl(39deg 100% 95.94%);
+              }
+              
+              .verbal {
+                color: var(--green-teal);
+                background: hsl(166deg 100% 94.43%);
+              }
+              
+              .visual {
+                color:var(--cobalt-blue);
+                background: hsl(234deg 100% 95.51%);
+              }
+            .subject-score{
+                color: var(--lighter-gray-blue);
+                .bold{
+                    color: var(--dark-gray-blue);
+                }
+            }
+              
+              
+        }
+
+    }
+}
+
+
+.attribution { 
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px; 
+    text-align: center; 
+    a { color: hsl(228, 45%, 44%); }
+}
+
+
+@media(max-width:700px){
+    #result-summary-component{
+        align-items: flex-start;
+        margin-bottom: 30px;
+        .container{
+            flex-direction: column;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: -5px 5px 5px var(--pale-blue),
+            5px -5px 5px var(--pale-blue),
+            0px 10px 10px var(--pale-blue);
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .overall-score-component,.summary-score-component{
+            flex: 50%;
+            padding:40px;
+            .title{
+                margin-bottom: 30px;
+            }
+        }
+        .overall-score-component{
+            border-radius: 0;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+        .summary-score-component{
+            border-radius: 0;
+        }
+    }
+
+    .attribution { 
+        position: static;
+        transform: unset;
+        font-size: 13px; 
+        padding: 20px;
+    }
+    
+}
