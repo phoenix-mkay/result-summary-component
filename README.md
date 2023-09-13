@@ -25,12 +25,12 @@ Users should be able to:
 
 ### Screenshot
 
-    ![](https://github.com/phoenix-mkay/result-summary-component/blob/main/assets/images/result-component-screenshot.png)
+  !["Project Sreenshot"](https://github.com/phoenix-mkayresult-summary-componentblob/main/assets/images/result-component-screenshot.png)
 
 ### Links
 
-- Solution URL:[https://github.com/phoenix-mkay/result-summary-component]
-- Live Site URL:[https://thunderous-kitsune-299570.netlify.app/]
+- Solution URL:[](https://github.com/phoenix-mkay/result-summary-component)
+- Live Site URL:[](https://thunderous-kitsune-299570.netlify.app/)
 
 ## My process
 
