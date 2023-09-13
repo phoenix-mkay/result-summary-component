@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-    ![](./assets/images/result-component-screenshot.png)
+    ![](https://github.com/phoenix-mkay/result-summary-component/blob/main/assets/images/result-component-screenshot.png)
 
 ### Links
 
