@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL:[](https://github.com/phoenix-mkay/result-summary-component)
-- Live Site URL:[](https://thunderous-kitsune-299570.netlify.app/)
+- Solution URL:[Solution URL](https://github.com/phoenix-mkay/result-summary-component)
+- Live Site URL:[Live Site Link](https://thunderous-kitsune-299570.netlify.app/)
 
 ## My process
 
